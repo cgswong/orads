@@ -1,0 +1,18 @@
+# #####################################################
+# NAME: replState-p02.ldif
+#
+# DESC: LDIF file to enable replication.
+#
+# $HeadURL$
+# $LastChangedBy$
+# $LastChangedDate$
+# $LastChangedRevision$
+#
+# LOG:
+# yyyy/mm/dd [user] - [notes]
+# 2014/05/12 cgwong - [v1.0.0] Creation from original.
+# #####################################################
+dn: orclreplicaid=oidprd02_oidp2,cn=replication configuration
+changetype: modify
+replace: orclreplicastate
+orclreplicastate: 0

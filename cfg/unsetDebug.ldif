@@ -1,0 +1,23 @@
+# #####################################################
+# NAME: unsetDebug.ldif
+#
+# DESC: LDIF file to disable debugging of Java external
+#       authentication plugin.
+#
+# $HeadURL$
+# $LastChangedBy$
+# $LastChangedDate$
+# $LastChangedRevision$
+#
+# LOG:
+# yyyy/mm/dd [user] - [notes]
+# 2014/05/12 cgwong - [v1.0.0] Creation from original.
+# #####################################################
+dn: cn=oid1,cn=osdldapd,cn=subconfigsubentry
+changetype:modify
+replace:orcldebugflag
+orcldebugflag: 0
+-
+changetype:modify
+replace:orcldebugop
+orcldebugop: 0

@@ -1,0 +1,32 @@
+# #####################################################
+# NAME: oidTuning.ldif
+#
+# DESC: LDIF file to update/tune OID.
+#       - The LDAP connection timeout is set to 60 seconds.
+#       - The maximum concurrent connections is set to 10.
+#       - Referential lookups are enabled. 
+#
+# $HeadURL$
+# $LastChangedBy$
+# $LastChangedDate$
+# $LastChangedRevision$
+#
+# LOG:
+# yyyy/mm/dd [user] - [notes]
+# 2014/05/12 cgwong - [v1.0.0] Creation from original.
+# #####################################################
+
+dn: cn=dsaconfig,cn=configsets,cn=oracle internet directory
+changetype: modify
+replace: orclskiprefinsql
+orclskiprefinsql: 1
+-
+dn: cn=oid1,cn=osdldapd,cn=subconfigsubentry
+changetype: modify
+replace: orclldapconntimeout
+orclldapconntimeout: 60
+
+dn: cn=oid1,cn=osdldapd,cn=subconfigsubentry
+changetype: modify
+replace: orclmaxcc
+orclmaxcc: 10

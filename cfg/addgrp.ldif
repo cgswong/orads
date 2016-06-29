@@ -1,0 +1,22 @@
+# #####################################################
+# NAME: addgrp.ldif
+#
+# DESC: LDIF file to add a group.
+#
+# $HeadURL$
+# $LastChangedBy$
+# $LastChangedDate$
+# $LastChangedRevision$
+#
+# LOG:
+# yyyy/mm/dd [user] - [notes]
+# 2014/05/12 cgwong - [v1.0.0] Creation from original.
+# #####################################################
+dn: cn=OCS_PORTAL_USERS, cn=groups,dc=mycity,dc=mydomain,dc=com
+displayname: Oracle Collaboration Suite Users
+description: Group of users for whom the Oracle Collaboration Suite home page is the default page.
+objectclass: top
+objectclass: groupOfUniqueNames
+objectclass: orclGroup
+uniquemember: cn=orcladmin
+cn: OCS_PORTAL_USERS

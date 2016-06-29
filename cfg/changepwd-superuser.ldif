@@ -1,0 +1,19 @@
+# #####################################################
+# NAME: changepwd-superuser.ldif
+#
+# DESC: LDIF file to change Super User (cn=orcladmin) password.
+#       Substitute [pwd] for new password
+#
+# $HeadURL$
+# $LastChangedBy$
+# $LastChangedDate$
+# $LastChangedRevision$
+#
+# LOG:
+# yyyy/mm/dd [user] - [notes]
+# 2014/05/12 cgwong - [v1.0.0] Creation from original.
+# #####################################################
+dn:
+changetype: modify
+replace: orclsupassword
+orclsupassword: [pwd]

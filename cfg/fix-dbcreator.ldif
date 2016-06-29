@@ -1,0 +1,19 @@
+# #####################################################
+# NAME: fix-dbcreator.ldif
+#
+# DESC: LDIF file to fix/add Oracle DB Creators.
+#       group.
+#
+# $HeadURL$
+# $LastChangedBy$
+# $LastChangedDate$
+# $LastChangedRevision$
+#
+# LOG:
+# yyyy/mm/dd [user] - [notes]
+# 2014/05/12 cgwong - [v1.0.0] Creation from original.
+# #####################################################
+dn: cn=OracleDBCreators,cn=OracleContext,dc=mycity,dc=mydomain,dc=com
+changetype: modify
+add: objectclass
+objectclass: orclPrivilegeGroup

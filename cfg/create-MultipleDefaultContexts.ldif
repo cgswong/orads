@@ -1,0 +1,21 @@
+# #####################################################
+# NAME: create-MultipleDefaultContexts.ldif
+#
+# DESC: LDIF file to create multiple default Oracle Contexts.
+#
+# $HeadURL$
+# $LastChangedBy$
+# $LastChangedDate$
+# $LastChangedRevision$
+#
+# LOG:
+# yyyy/mm/dd [user] - [notes]
+# 2014/05/12 cgwong - [v1.0.0] Creation from original.
+# #####################################################
+dn: cn=Common,cn=Products,cn=OracleContext
+ replace: orclCommonContextMap
+ orclCommonContextMap:
+ (contextMap=
+   (domain_map=(domain=mydomain.com)(DN="dc=mydomain,dc=com"))
+   (domain_map=(domain=mycity.mydomain.com)(DN="dc=mycity,dc=mydomain,dc=com"))
+  )

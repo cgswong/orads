@@ -1,0 +1,18 @@
+# #####################################################
+# NAME: replDisable.ldif
+#
+# DESC: LDIF file to disable replication.
+#
+# $HeadURL$
+# $LastChangedBy$
+# $LastChangedDate$
+# $LastChangedRevision$
+#
+# LOG:
+# yyyy/mm/dd [user] - [notes]
+# 2014/05/12 cgwong - [v1.0.0] Creation from original.
+# #####################################################
+dn: cn=configset0, cn=osdrepld, cn=subconfigsubentry
+changetype: modify
+replace: orclactivatereplication
+orclactivatereplication: 0

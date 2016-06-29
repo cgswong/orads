@@ -1,0 +1,119 @@
+<?xml version = '1.0'?>
+<DatabaseTemplate name="odsrep_db" description="Oracle Directory Services Repository pre-built database" version="11.1.0.0.0">
+   <CommonAttributes>
+      <option name="OMS" value="false"/>
+      <option name="JSERVER" value="true"/>
+      <option name="SPATIAL" value="false"/>
+      <option name="IMEDIA" value="false"/>
+      <option name="XDB_PROTOCOLS" value="true"/>
+      <option name="ORACLE_TEXT" value="false"/>
+      <option name="SAMPLE_SCHEMA" value="false"/>
+      <option name="CWMLITE" value="false"/>
+      <option name="EM_REPOSITORY" value="true"/>
+      <option name="APEX" value="false"/>
+      <option name="OWB" value="false"/>
+      <option name="DV" value="false"/>
+   </CommonAttributes>
+   <Variables/>
+   <CustomScripts Execute="false"/>
+   <InitParamAttributes>
+      <InitParams>
+         <initParam name="cluster_database" value="FALSE"/>
+         <initParam name="control_file_record_keep_time" value="60"/>
+         <initParam name="large_pool_size" value="134217728"/>
+         <initParam name="db_create_file_dest" value="{ORACLE_BASE}/oradata"/>
+         <initParam name="db_name" value=""/>
+         <initParam name="undo_retention" value="10800"/>
+         <initParam name="session_cached_cursors" value="500"/>
+         <initParam name="filesystemio_options" value="setall"/>
+         <initParam name="dispatchers" value="(PROTOCOL=TCP) (SERVICE={SID}XDB)"/>
+         <initParam name="session_max_open_files" value="50"/>
+         <initParam name="audit_file_dest" value="{ORACLE_BASE}/admin/{DB_UNIQUE_NAME}/adump"/>
+         <initParam name="compatible" value="11.2.0.3.0"/>
+         <initParam name="shared_pool_size" value="318767104"/>
+         <initParam name="remote_login_passwordfile" value="EXCLUSIVE"/>
+         <initParam name="aq_tm_processes" value="1"/>
+         <initParam name="db_create_online_log_dest_2" value="+FRA1"/>
+         <initParam name="db_create_online_log_dest_1" value="+DAT1"/>
+         <initParam name="job_queue_processes" value="10"/>
+         <initParam name="sga_target" value="2147483648"/>
+         <initParam name="dml_locks" value="200"/>
+         <initParam name="processes" value="2500"/>
+         <initParam name="parallel_degree_policy" value="AUTO"/>
+         <initParam name="undo_tablespace" value="UNDOTBS1"/>
+         <initParam name="optimizer_features_enable" value="11.2.0.3"/>
+         <initParam name="control_files" value="(&quot;{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/current.256.804846417&quot;, &quot;{ORACLE_BASE}/fast_recovery_area/{DB_UNIQUE_NAME}/current.256.804846417&quot;)"/>
+         <initParam name="diagnostic_dest" value="{ORACLE_BASE}"/>
+         <initParam name="resource_limit" value="TRUE"/>
+         <initParam name="db_recovery_file_dest" value="{ORACLE_BASE}/fast_recovery_area"/>
+         <initParam name="audit_trail" value="DB"/>
+         <initParam name="fast_start_mttr_target" value="300"/>
+         <initParam name="audit_sys_operations" value="TRUE"/>
+         <initParam name="db_files" value="1024"/>
+         <initParam name="memory_target" value="0"/>
+         <initParam name="backup_tape_io_slaves" value="TRUE"/>
+         <initParam name="streams_pool_size" value="67108864"/>
+         <initParam name="db_block_size" value="8192"/>
+         <initParam name="db_cache_size" value="1258291200"/>
+         <initParam name="java_pool_size" value="67108864"/>
+         <initParam name="open_cursors" value="1500"/>
+         <initParam name="db_recovery_file_dest_size" value="8589934592"/>
+         <initParam name="pga_aggregate_target" value="1073741824"/>
+         <initParam name="_b_tree_bitmap_plans" value="FALSE"/>
+      </InitParams>
+      <MiscParams>
+         <archiveLogMode>false</archiveLogMode>
+         <initParamFileName>{ORACLE_BASE}/admin/{DB_UNIQUE_NAME}/pfile/init.ora</initParamFileName>
+      </MiscParams>
+      <SPfile useSPFile="true">{ORACLE_HOME}/dbs/spfile{SID}.ora</SPfile>
+   </InitParamAttributes>
+   <StorageAttributes>
+      <DataFiles>
+         <Location>{ORACLE_HOME}/assistants/dbca/templates/odsrep_db.dfb</Location>
+         <SourceDBName>odsrep</SourceDBName>
+         <Name id="1" Tablespace="SYSTEM" Contents="PERMANENT" Size="700" autoextend="true" blocksize="8192">{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/system.260.804846421</Name>
+         <Name id="2" Tablespace="SYSAUX" Contents="PERMANENT" Size="600" autoextend="true" blocksize="8192">{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/sysaux.261.804846427</Name>
+         <Name id="3" Tablespace="UNDOTBS1" Contents="UNDO" Size="504" autoextend="true" blocksize="8192">{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/undotbs1.262.804846431</Name>
+         <Name id="4" Tablespace="USERS" Contents="PERMANENT" Size="5" autoextend="true" blocksize="8192">{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/users.264.804846437</Name>
+         <Name id="5" Tablespace="OLTS_DEFAULT" Contents="PERMANENT" Size="1" autoextend="true" blocksize="8192">{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/olts_default.266.804895723</Name>
+         <Name id="6" Tablespace="OLTS_SVRMGSTORE" Contents="PERMANENT" Size="1" autoextend="true" blocksize="8192">{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/olts_svrmgstore.267.804895723</Name>
+         <Name id="7" Tablespace="OLTS_BATTRSTORE" Contents="PERMANENT" Size=".9765625" autoextend="true" blocksize="8192">{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/olts_battrstore.268.804895723</Name>
+         <Name id="8" Tablespace="OLTS_CT_STORE" Contents="PERMANENT" Size="32" autoextend="true" blocksize="8192">{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/olts_ct_store.270.804895723</Name>
+         <Name id="9" Tablespace="OLTS_ATTRSTORE" Contents="PERMANENT" Size="16" autoextend="true" blocksize="8192">{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/olts_attrstore.271.804895723</Name>
+      </DataFiles>
+      <TempFiles>
+         <Name id="1" Tablespace="TEMP" Contents="TEMPORARY" Size="20">{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/temp.263.804846431</Name>
+         <Name id="2" Tablespace="IAS_TEMP" Contents="TEMPORARY" Size="100">{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/ias_temp.269.804895723</Name>
+      </TempFiles>
+      <ControlfileAttributes id="Controlfile">
+         <maxDatafiles>100</maxDatafiles>
+         <maxLogfiles>16</maxLogfiles>
+         <maxLogMembers>3</maxLogMembers>
+         <maxLogHistory>1</maxLogHistory>
+         <maxInstances>8</maxInstances>
+         <image name="current.256.804846417" filepath="{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/"/>
+         <image name="current.256.804846417" filepath="{ORACLE_BASE}/fast_recovery_area/{DB_UNIQUE_NAME}/"/>
+      </ControlfileAttributes>
+      <RedoLogGroupAttributes id="1">
+         <reuse>false</reuse>
+         <fileSize unit="KB">131072</fileSize>
+         <Thread>1</Thread>
+         <member ordinal="0" memberName="group_1.257.804846417" filepath="{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/"/>
+         <member ordinal="0" memberName="group_1.257.804846417" filepath="{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/"/>
+      </RedoLogGroupAttributes>
+      <RedoLogGroupAttributes id="2">
+         <reuse>false</reuse>
+         <fileSize unit="KB">131072</fileSize>
+         <Thread>1</Thread>
+         <member ordinal="0" memberName="group_2.258.804846419" filepath="{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/"/>
+         <member ordinal="0" memberName="group_2.258.804846419" filepath="{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/"/>
+      </RedoLogGroupAttributes>
+      <RedoLogGroupAttributes id="3">
+         <reuse>false</reuse>
+         <fileSize unit="KB">131072</fileSize>
+         <Thread>1</Thread>
+         <member ordinal="0" memberName="group_3.259.804846419" filepath="{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/"/>
+         <member ordinal="0" memberName="group_3.259.804846421" filepath="{ORACLE_BASE}/oradata/{DB_UNIQUE_NAME}/"/>
+      </RedoLogGroupAttributes>
+   </StorageAttributes>
+</DatabaseTemplate>

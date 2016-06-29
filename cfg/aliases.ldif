@@ -1,0 +1,19 @@
+# #####################################################
+# NAME: aliases.ldif
+#
+# DESC: LDIF file to add Net aliases.
+#
+# $HeadURL$
+# $LastChangedBy$
+# $LastChangedDate$
+# $LastChangedRevision$
+#
+# LOG:
+# yyyy/mm/dd [user] - [notes]
+# 2014/05/12 cgwong - [v1.0.0] Creation from original.
+# #####################################################
+dn: cn=dvdb,cn=OracleContext,dc=mycity,dc=mydomain,dc=com
+cn: dvdb
+objectclass: orclNetServiceAlias
+objectclass: top
+aliasedobjectname: cn=d3db,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com

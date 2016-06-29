@@ -1,0 +1,36 @@
+#########################################################################
+# NAME: sqlnet.ora
+#
+# DESC: General sqlnet.ora file.
+#
+# $HeadURL$
+# $LastChangedBy$
+# $LastChangedDate$
+# $LastChangedRevision$
+#
+# LOG :
+# yyyy/mm/dd [user]: [version] Notes
+# 2014/04/10 cgwong: [v1.0.0] Created initial standardized version.
+#########################################################################
+
+# Standard setup for LDAP based directory naming #
+NAMES.DEFAULT_DOMAIN = mydomain.com
+NAMES.DIRECTORY_PATH = (LDAP, EZCONNECT, TNSNAMES)
+
+# External Password Store using Oracle Wallet for enhanced security #
+##SQLNET.WALLET_OVERRIDE = TRUE
+##SSL_CLIENT_AUTHENTICATION = FALSE
+##SSL_VERSION = 0
+##WALLET_LOCATION =
+##  (SOURCE =
+##    (METHOD = FILE)
+##    (METHOD_DATA =
+##    (DIRECTORY = c:\oracle\network\security\.wallet)
+##    )
+##  )
+
+# If using Kerberos and/or SSL certificates #
+##SQLNET.AUTHENTICATION_SERVICES = (KERBEROS5,TCPS)
+
+# Kerberos specific #
+##SQLNET.AUTHENTICATION_KERBEROS5_SERVICE = kservice

@@ -1,0 +1,569 @@
+# #####################################################
+# NAME: aBinds.ldif
+#
+# DESC: LDIF file to add Super Administrator.
+#       Substitute [username] which name of actual user.
+#
+# $HeadURL$
+# $LastChangedBy$
+# $LastChangedDate$
+# $LastChangedRevision$
+#
+# LOG:
+# yyyy/mm/dd [user] - [notes]
+# 2014/05/12 cgwong - [v1.0.0] Creation from original.
+# #####################################################
+dn: cn=OracleDBSecurityAdmins,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDBCreators,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleNetAdmins,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleContextAdmins,cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleUserSecurityAdmins,cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDomainAdmins,cn=OracleDefaultDomain,cn=OracleDBSecurity,cn=Products,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDBAQUsers, cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=iASAdmins, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=authenticationServices, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=verifierServices, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=UserProxyPrivilege, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASAdminGroup, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASUserPriv, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASConfiguration, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASGroupPriv, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASCreateUser, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASDeleteUser, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASEditUser, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASCreateGroup, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASDeleteGroup, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASEditGroup, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=oraclemanageextendedpreferences, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleResourceAccessGroup, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=ComputerAdmins, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=EmailAdminsGroup,cn=EMailServerContainer,cn=Products,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=UMAdminsGroup,cn=UMContainer,cn=Products,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASServiceAdminGroup, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASAccountAdminGroup, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=ASPAdmins, cn=groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=IAS & User Mgmt Application Admins, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=Trusted Applications Admins, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=Common User Attributes, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=Common Group Attributes, cn=Groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=PKIAdmins,cn=groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=CRLAdmins,cn=groups,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OCS_PORTAL_USERS, cn=groups,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDBSecurityAdmins,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDBCreators,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleNetAdmins,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleContextAdmins,cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleUserSecurityAdmins,cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDomainAdmins,cn=OracleDefaultDomain,cn=OracleDBSecurity,cn=Products,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDBAQUsers, cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=iASAdmins, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=authenticationServices, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=verifierServices, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=UserProxyPrivilege, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASAdminGroup, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASUserPriv, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASConfiguration, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASGroupPriv, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASCreateUser, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASDeleteUser, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASEditUser, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASCreateGroup, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASDeleteGroup, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASEditGroup, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=oraclemanageextendedpreferences, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleResourceAccessGroup, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=ComputerAdmins, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=odisgroup,cn=odi,cn=oracle internet directory
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=Provisioning Admins,cn=changelog subscriber,cn=oracle internet directory
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=dipadmingrp,cn=odi,cn=oracle internet directory
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=odipgroup,cn=odi,cn=oracle internet directory
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDBSecurityAdmins,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDBCreators,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleNetAdmins,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleContextAdmins,cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleUserSecurityAdmins,cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDomainAdmins,cn=OracleDefaultDomain,cn=OracleDBSecurity,cn=Products,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDBAQUsers, cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=iASAdmins, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=authenticationServices, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=verifierServices, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=UserProxyPrivilege, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASUserPriv, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASConfiguration, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASGroupPriv, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASCreateUser, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASDeleteUser, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASEditUser, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASCreateGroup, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASDeleteGroup, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASAdminGroup, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASEditGroup, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=oraclemanageextendedpreferences, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleResourceAccessGroup, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=ComputerAdmins, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=EmailAdminsGroup,cn=EMailServerContainer,cn=Products,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=UMAdminsGroup,cn=UMContainer,cn=Products,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASServiceAdminGroup, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASAccountAdminGroup, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=ASPAdmins, cn=groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=IAS & User Mgmt Application Admins, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=Trusted Applications Admins, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=Common User Attributes, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=Common Group Attributes, cn=Groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=PKIAdmins,cn=groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=CRLAdmins,cn=groups,cn=OracleContext
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=EmailAdminsGroup,cn=EMailServerContainer,cn=Products,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=UMAdminsGroup,cn=UMContainer,cn=Products,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASServiceAdminGroup, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OracleDASAccountAdminGroup, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=ASPAdmins, cn=groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=IAS & User Mgmt Application Admins, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=Trusted Applications Admins, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=Common User Attributes, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=Common Group Attributes, cn=Groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=PKIAdmins,cn=groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=CRLAdmins,cn=groups,cn=OracleContext,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com
+
+dn: cn=OCS_PORTAL_USERS, cn=groups,dc=antwerp,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[username],cn=Users,dc=mydomain,dc=com

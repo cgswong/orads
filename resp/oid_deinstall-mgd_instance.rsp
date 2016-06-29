@@ -1,0 +1,45 @@
+[ENGINE]
+
+#DO NOT CHANGE THIS.
+Response File Version=1.0.0.0.0
+
+[GENERIC]
+
+#Identifies if the Instance deinstallation is valid or not
+DEINSTALL_IN_ASINSTANCE_MODE=true
+
+#Specify true for Oracle Home deinstall
+OH_HOME_DEINSTALL=false
+
+#Specify true for Managed Instance deinstall
+DOMAIN_MANAGED_ASINSTANCE_DEINSTALL=true
+
+#Specify true for Un-managed Instance deinstall
+UNMANAGED_ASINSTANCE_DEINSTALL=false
+
+
+[SYSTEM]
+
+
+[APPLICATIONS]
+
+
+[RELATIONSHIPS]
+
+#Specify the Domain Host Name
+DOMAIN_HOST_NAME=oidprd02.mydomain.com
+
+#Specify the Domain Port Number
+DOMAIN_PORT_NO=7001
+
+#Specify the Domain User Name
+DOMAIN_USER_NAME=weblogic
+
+#Specify the Domain Password
+DOMAIN_USER_PASSWORD=%%DOMAIN_PWD%%
+
+#Specify the list of Instance to be deinstalled in the following format. InstanceName^LocationOfInstance$InstanceName^LocationOfInstance
+MANAGED_INSTANCE_LIST=asinst_1^/oracle/app/oracle/product/fmw/asinst_1$
+
+
+

@@ -1,0 +1,20 @@
+# #####################################################
+# NAME: chngpwd.ldif
+#
+# DESC: LDIF file to change user password.
+#       Substitute [pwd] with name of real user and
+#       add actual DN for user.
+#
+# $HeadURL$
+# $LastChangedBy$
+# $LastChangedDate$
+# $LastChangedRevision$
+#
+# LOG:
+# yyyy/mm/dd [user] - [notes]
+# 2014/05/12 cgwong - [v1.0.0] Creation from original.
+# #####################################################
+dn:
+changetype: modify
+replace: orclsupassword
+orclsupassword: [pwd]

@@ -1,0 +1,20 @@
+# #####################################################
+# NAME: replAdd03-d01.ldif
+#
+# DESC: LDIF file to add inclusions and exclusions for
+#       a replication agreement.
+#
+# $HeadURL$
+# $LastChangedBy$
+# $LastChangedDate$
+# $LastChangedRevision$
+#
+# LOG:
+# yyyy/mm/dd [user] - [notes]
+# 2014/05/12 cgwong - [v1.0.0] Creation from original.
+# #####################################################
+dn: cn=includednamingcontext000001,cn=replication namecontext,orclagreementid=000003,orclreplicaid=oiddev01_oidd1,cn=replication configuration
+objectclass: top
+objectclass: orclreplnamectxconfig
+orclincludednamingcontexts: cn=OracleContext,dc=mydomain,dc=com
+orclexcludednamingcontexts: cn=system_name,cn=OracleContext,dc=mydomain,dc=com

@@ -1,0 +1,19 @@
+# #####################################################
+# NAME: addUser-NetAdm.ldif
+#
+# DESC: LDIF file to add Oracle Net Administrator.
+#       Substitute [user] with name of real user.
+#
+# $HeadURL$
+# $LastChangedBy$
+# $LastChangedDate$
+# $LastChangedRevision$
+#
+# LOG:
+# yyyy/mm/dd [user] - [notes]
+# 2014/05/12 cgwong - [v1.0.0] Creation from original.
+# #####################################################
+dn: cn=OracleNetAdmins,cn=OracleContext,dc=mydomain,dc=com
+changetype: modify
+add: uniquemember
+uniquemember: cn=[user],cn=Users,dc=mydomain,dc=com
